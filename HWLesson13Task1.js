@@ -14,12 +14,13 @@ class Student {
 function getStudent() {
     return new Promise(function(resolve, reject){
         setTimeout(() => {
-            resolve("Anri");
-        }, 1000)
+            resolve(new Student("Anry", 32));
+        }, 4000)
     })
 }
 
 let studentAnri = getStudent();
+
 studentAnri.then((value) => {
-    console.log(value);
+    console.log(value.studentName);
 })
