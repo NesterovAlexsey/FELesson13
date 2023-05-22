@@ -13,3 +13,21 @@
 // и выводит в консоль текст "Завершено с ошибкой(и указать, какой ошибкой)".
 // Ниже вызвать функцию getDriverLicence, передав в нее аргументами две другие функции.
 
+function success(value){
+    console.log("Успешно завершено с результатом: " + value);
+}
+
+function failure(value){
+    console.log("Завершено с ошибкой: " + value);
+}
+
+function getDriverLicence(success, failure) {
+    let randomNum = Math.random();
+    if (randomNum > 0.1) {
+        success("успех!");
+    } else {
+        failure("упс, неудача :(");
+    }
+}
+
+getDriverLicence(success, failure)
